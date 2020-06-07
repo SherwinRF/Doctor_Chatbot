@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Welcome to Doctor Chatbot </title>
+</head>
+
+<style type="text/css">
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("{{ url_for('static', filename='home.jpg' ) }}");
+
+  /* Control the height of the image */
+  min-height: 640px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #e60000;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+</style>
+
+<body>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">	
+    <span class="close">&times;</span>
+    <p>
+    	<h3 align="center"> Doctor Chatbot Privacy Policy </h3>
+		This Privacy Policy applies to the practices of Doctor Chatbot concerning information that is obtained by and through your use of our website, web application or mobile application and the services provided through the Application. Doctor Chatbot is committed to respecting your privacy and recognizing your need for appropriate protection and management of personally identifiable information (“PII”) and the information you share. The purpose of this Privacy Policy is to explain the types of information This Project obtains about users of our Application and/or Services, how the information is obtained, how it is used, how it is disclosed, how you can get access to this information, and the choices you have regarding our use of, and your ability to review and correct, the information. By using the Application and/or the Services, you are accepting and consenting to the use of your information as described in this Policy and you agree to be bound by this Policy. Please review this Policy carefully. <br>
+		This Privacy Policy applies only to this Application and Services and becomes effective as soon as you use the Application. Any other services rendered by any independent provider are subject to that particular provider’s own privacy standards or policies.
+	</p>
+	<p>
+		<h3 align="center"> Terms and Conditions </h3>
+		The only PII that the Application obtains is information that you voluntarily provide or authorize. When you use our Services, we collect PII such as your name, age, gender, email address etc. We also may collect PII or Protected Health Information (“PHI”) from you when you make a request to be connected with an independent medical practice, which may provide an on-call licensed physician to provide non-emergency general adult and pediatric healthcare services at your location; create a profile; or comment on articles or complete surveys. <br>
+		The information that we collect varies depending upon how you use our Services. When you choose to Enroll, you will need to provide us with health-related information that a provider will need to determine whether he/she is willing to provide services to you. That information will be associated with your profile. Any PHI that you provide through the Application briefly describing your symptoms (or those of any minor for whom you request Services) will be sent to our employed medical provider or an independent alternate provider to be used for treatment and processing your payment for the Visit, and other services. All providers are bound to protect all PHI of patients in accordance with HIPAA rules, as outlined in our Notice of Privacy Practices.
+	</p>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="bg-img">
+  <form action="{{ url_for('Home') }}" method="post" class="container">
+    <h1>Doctor Chatbot</h1>
+
+    <label for="email"><b>Please Enter Email to Continue</b></label>
+    <input type="text" placeholder="Enter Valid Email" name="uemail" required>
+
+    <label>
+      <input type="checkbox" name="remember" style="margin-bottom:15px" required> I Agree <a href="#" id="myBtn"> Terms & Conditions </a>
+    </label>
+
+    <button type="submit" class="btn">Chat with Doctor</button>
+  </form>
+</div>
+
+<!-- Modal Script -->
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif; box-sizing: border-box;}
+
+    /* Full-width input fields */
+    input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    }
+
+    label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    }
+
+    /* Set a style for all buttons */
+    button {
+    background-color: #ff0000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 58%;
+    }
+    button:hover {
+    opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    }
+
+    .container {
+    padding: 16px;
+    }
+
+    span.psw {
+    float: right;
+    padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 5px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: red;
+    cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+    }
+    @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+
+    .cancelbtn {
+    width: 100%;
+    }
+    }
+
+    /* ToolTip */
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+</style>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='h.png' ) }}'); background-repeat: no-repeat; background-attachment: fixed;
+  background-size: cover;">
+    <div style="text-align: center;">
+       <h2 style="padding-top: 250px; padding-right: 4%">Click Here to get Form</h2>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; position: absolute; top: 45%; right: 48%; border: 2px solid #000000; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">Report Form</button>
+    </div>
+
+    <div id="id01" class="modal">  
+      <form class="modal-content animate" name="passdata" action="." method="post">
+        <div class="imgcontainer">
+          <h2> Report </h2>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+        <!--
+          <label for="age">Age</label>
+          <input type="text" style="width: 96%" id="Age" name="age" placeholder="Enter Your Age.." required> <br>
+          
+          <label for="gender">Gender</label>
+          <select id="gender" name="sex">
+            <option value="" disabled selected>Select Your Gender ..</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select> <br>
+          -->
+          <label for="cpt">Chest Pain Types</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">Select the type of chest-pain experienced by the individual: caused when your heart muscle doesn’t get enough oxygen-rich blood.</span>
+          </div>
+          <select id="gender" name="cp">
+            <option value="" disabled selected>Select Type Of Chest Pain  ..</option>
+            <option value="Typical Angina">Typical Angina</option>
+            <option value="Atypical Angina">Atypical Angina</option>
+            <option value="Non-anginal Pain">Non-anginal Pain</option>
+            <option value="Asymptomatic">Asymptomatic</option>
+          </select> <br>
+          
+          <label for="rbp">Resting Blood Pressure</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">Blood pressure value of an individual in mmHg (unit): may be high due to obesity, high cholesterol or diabetes.</span>
+          </div>
+          <input type="text" style="width: 96%" id="Age" name="trestbps" placeholder="Blood Pressure Value (mmHg).."> <br>
+          
+          <label for="sc">Serum Cholestoral</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">Serum cholesterol in mg/dl (unit): A high level of low-density lipoprotein (LDL) cholesterol (“bad” cholesterol).</span>
+          </div>
+          <input  type="text" style="width: 96%" id="CS" name="chol" placeholder="Cholestoral Value (mg/dl).."> <br>
+          
+          <label for="fbs" disabled selected>Fasting Blood Sugar</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">Compares the fasting blood sugar value of an individual with 120mg/dl. Not producing enough of a hormone secreted by your pancreas (insulin).</span>
+          </div>
+          <select id="fps" name="fbs">
+            <option value="" disabled selected>Fasting Blood Sugar > 120mg/dl</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select> <br>
+          
+          <label for="recg" disabled selected>Resting ECG</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">Resting electrocardiographic Results.</span>
+          </div>
+          <select id="fps" name="restecg">
+            <option value="" disabled selected>Resting ECG</option>
+            <option value="Normal">Normal</option>
+            <option value="Having ST-T Wave Abnormality">Having ST-T Wave Abnormality</option>
+            <option value="Left Ventricular Hyperthrophy">Left Ventricular Hyperthrophy</option>
+          </select> <br>
+
+          <label for="mhra">Max. Heart Rate Achieved</label>
+          <input  type="text" style="width: 96%" id="CS" name="thalach" placeholder="Max. Heart Rate .."> <br>
+          
+          <label for="eia">Exercise Induced Angina </label>
+          <select id="fps" name="exang">
+            <option value="" disabled selected>Exercise Induced Angina </option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select> <br>
+
+          <label for="stdie">ST Depression Induced by Exercise</label>
+          <input type="text" style="width: 96%" id="Age" name="oldpeak" placeholder="Enter Value.."> <br>
+
+          <label for="gender">Peak Exercise ST Segment</label>
+          <div class="tooltip">(info)
+            <span class="tooltiptext">A treadmill ECG stress test is considered abnormal when there is a horizontal or down-sloping ST-segment depression ≥ 1 mm at 60–80 ms after the J point.</span>
+          </div>
+          <select id="fps" name="slope">
+            <option value="" disabled selected>Peak exercise ST Segment</option>
+            <option value="Upsloping">Upsloping</option>
+            <option value="Flat">Flat</option>
+            <option value="Downsloping">Downsloping</option>
+          </select> <br>
+
+          <label for="mvcf">Number of Major Vessels Colored by Flourosopy </label>
+          <input  type="text" style="width: 96%" id="CS" name="ca" placeholder="Enter value .."> <br>
+
+          <label for="gender">thalassemia</label>
+          <select id="fps" name="thal">
+            <option value="" disabled selected>Thal </option>
+            <option value="Normal">Normal</option>
+            <option value="Fixed Defect">Fixed Defect</option>
+            <option value="Reversible Defect">Reversible Defect</option>
+          </select> <br>
+          
+          <button type="submit" style="width: 100%">Submit Report</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+    }
+    </script>
+  </body>
+</html>
