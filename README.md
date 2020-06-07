@@ -31,7 +31,7 @@ $ pip install -r requirements.txt
 
 How to use the Project:
 ---
-* Before we start, go to Project folder and edit `pygmail.py` file, filling `gmailaddress` and `gmailpassword` variables with a email and password, which are admin credentials for this project. We recommend creating & using a dummy email for test purpose. Login, and go to [Less Secure App Access](https://myaccount.google.com/lesssecureapps) and turn it ON to allow mail permissions.
+* Before we start, go to Project folder and edit `pygmail.py` file, filling `gmailaddress` and `gmailpassword` variables with a email and password, which are admin credentials for this project. We recommend creating & using a dummy Gmail for test purpose. Login, and go to [Less Secure App Access](https://myaccount.google.com/lesssecureapps) and turn it ON to allow mail permissions.
 * Now, Go to [Dialogflow Console](https://dialogflow.cloud.google.com/#/login/) & create a new project named `Doctor_Chatbot`. Click on the gear icon (next to project name), and import the `Doctor_Chatbot.rar` file (from repository) from the **IMPORT FROM ZIP** option available. 
 * Download [ngrok](https://ngrok.com/download/). Open command prompt from that folder in which it's present, and execute `ngrok http 5000` command. Copy the **https** link. Go back to Dialogflow project, click on *Fulfillment* tab and paste the link in the URL section followed by `/webhook`. Click SAVE button below.
 * Go to *Integration* tab, click **Web Demo** and copy the url link. Replace this link in the `Chatbot.html` file, down below inside the <iframe> where the url is present.
