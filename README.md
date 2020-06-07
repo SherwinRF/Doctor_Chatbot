@@ -18,10 +18,8 @@ pandas
 sklearn
 smtplib
 pygmail
-json
-os
 
-pip install requirements.txt
+$ pip install -r requirements.txt
 
 How to use the Project:
 Go to Dialogflow Console & create a new project named "Doctor_Chatbot". Click on the gear icon, and import the Doctor_Chatbot.rar file (repository) from the options available. 
