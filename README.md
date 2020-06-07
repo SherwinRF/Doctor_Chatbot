@@ -6,8 +6,6 @@ Note: The Appointment Scheduler is just a dummy module for this project.
 
 #### [Project Demonstration Video](https://youtu.be/p3QAyCCfmLI/) (Youtube):
 
-[![Project Demonstration Video](https://img.youtube.com/vi/p3QAyCCfmLI/0.jpg)](https://www.youtube.com/watch?v=p3QAyCCfmLI)
-
 Technology Stack used:
 ---
 * [Dialogflow (Api.ai)](https://dialogflow.com/)
@@ -39,4 +37,4 @@ How to use the Project:
 * Watch the [Project video](https://youtu.be/p3QAyCCfmLI/) to check its working.
 
 ### Project Screenshot
-![scr1](https://user-images.githubusercontent.com/66524582/83961537-b524ff80-a8b1-11ea-86d3-bf5a58401795.png)
+![Screenshot 1](https://user-images.githubusercontent.com/66524582/83961537-b524ff80-a8b1-11ea-86d3-bf5a58401795.png)
