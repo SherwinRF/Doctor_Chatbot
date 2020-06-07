@@ -1,7 +1,0 @@
-flask
-pandas
-sklearn
-smtplib
-pygmail
-json
-os
