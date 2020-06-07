@@ -22,6 +22,7 @@ Python Libraries used:
 * sklearn
 * smtplib
 * pygmail
+* json
 
 from Project folder, run this command to install the libraries:
 ```
