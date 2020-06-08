@@ -283,8 +283,8 @@ def makeWebhookResult(req):
         
     # Suffering_Patient_sym_report_results
     if query_response.get("action") == "Suffering_Patient_sym2.Suffering_Patient_sym2-custom.Suffering_Patient_sym3-custom.Suffering_Patient_sym_final-custom.Suffering_Patient_sym_report_yes-custom.Suffering_Patient_sym_report_filling-custom":
-        a2 = "Thanks " + name + ", after analysing the information you have given us, The System Predicts that "+ speech +" "+ new_report + ". Some ways how you can avoid this problem are: " + soln + "--> Please note, this is not a diagnosis. Always visit a doctor if you are in doubt, or if your symptoms get worse or don't improve. If your situation is serious, always call the emergency services. Do you want to book an appointment with a doctor?"
-        res = {  "fulfillmentText": a2, }
+        ans2 = "Thanks " + name + ", after analysing the information you have given us, The System Predicts that "+ speech +" "+ new_report + ". Some ways how you can avoid this problem are: " + soln + "--> Please note, this is not a diagnosis. Always visit a doctor if you are in doubt, or if your symptoms get worse or don't improve. If your situation is serious, always call the emergency services. Do you want to book an appointment with a doctor?"
+        res = {  "fulfillmentText": ans2, }
     
     # Suffering_Patient_sym_report_no
     if query_response.get("action") == "Suffering_Patient_sym2.Suffering_Patient_sym2-custom.Suffering_Patient_sym3-custom.Suffering_Patient_sym_final-custom":
