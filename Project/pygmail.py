@@ -6,7 +6,7 @@ def sendEmail( mailto, doctor, date, time, name, report ):
     
     sub = "Confirmed: Doctor Appointment Booked"
     if (len(report) == 0): report = "Checkup"
-    msag = "Hey " + name + ",\n\n Your Appointment has been Successfully Booked with Dr." + doctor + "\n\nDate : " + date + "\nTime : " + time + "\nProblem : " + report + "\n\nThank you for using Doctor Chatbot."
+    msag = "Hey " + name + ",\n\nYour Appointment has been Successfully Booked with Dr." + doctor + "\n\nDate : " + date + "\nTime : " + time + "\nProblem : " + report + "\n\nThank you for using Doctor Chatbot."
     msg = 'Subject: {}\n\n{}'.format(sub, msag)
     
     sub2 = "Appointment Booked with Doctor "+ doctor + " on "+ date
