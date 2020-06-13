@@ -194,9 +194,9 @@
           -->
           <label for="cpt">Chest Pain Types</label>
           <div class="tooltip">(info)
-            <span class="tooltiptext">Select the type of chest-pain experienced by the individual: caused when your heart muscle doesn’t get enough oxygen-rich blood.</span>
+            <span class="tooltiptext">Select the type of chest-pain experienced by the individual: caused when your heart muscle doesnt get enough oxygen-rich blood.</span>
           </div>
-          <select id="gender" name="cp">
+          <select id="gender" name="cp" required>
             <option value="" disabled selected>Select Type Of Chest Pain  ..</option>
             <option value="Typical Angina">Typical Angina</option>
             <option value="Atypical Angina">Atypical Angina</option>
@@ -208,19 +208,19 @@
           <div class="tooltip">(info)
             <span class="tooltiptext">Blood pressure value of an individual in mmHg (unit): may be high due to obesity, high cholesterol or diabetes.</span>
           </div>
-          <input type="text" style="width: 96%" id="Age" name="trestbps" placeholder="Blood Pressure Value (mmHg).."> <br>
+          <input type="text" style="width: 96%" id="Age" name="trestbps" placeholder="Blood Pressure Value (mmHg).." required> <br>
           
           <label for="sc">Serum Cholestoral</label>
           <div class="tooltip">(info)
-            <span class="tooltiptext">Serum cholesterol in mg/dl (unit): A high level of low-density lipoprotein (LDL) cholesterol (“bad” cholesterol).</span>
+            <span class="tooltiptext">Serum cholesterol in mg/dl (unit): A high level of low-density lipoprotein (LDL) cholesterol (â€œbadâ€� cholesterol).</span>
           </div>
-          <input  type="text" style="width: 96%" id="CS" name="chol" placeholder="Cholestoral Value (mg/dl).."> <br>
+          <input  type="text" style="width: 96%" id="CS" name="chol" placeholder="Cholestoral Value (mg/dl).." required> <br>
           
           <label for="fbs" disabled selected>Fasting Blood Sugar</label>
           <div class="tooltip">(info)
             <span class="tooltiptext">Compares the fasting blood sugar value of an individual with 120mg/dl. Not producing enough of a hormone secreted by your pancreas (insulin).</span>
           </div>
-          <select id="fps" name="fbs">
+          <select id="fps" name="fbs" required>
             <option value="" disabled selected>Fasting Blood Sugar > 120mg/dl</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
@@ -230,7 +230,7 @@
           <div class="tooltip">(info)
             <span class="tooltiptext">Resting electrocardiographic Results.</span>
           </div>
-          <select id="fps" name="restecg">
+          <select id="fps" name="restecg" required>
             <option value="" disabled selected>Resting ECG</option>
             <option value="Normal">Normal</option>
             <option value="Having ST-T Wave Abnormality">Having ST-T Wave Abnormality</option>
@@ -238,23 +238,23 @@
           </select> <br>
 
           <label for="mhra">Max. Heart Rate Achieved</label>
-          <input  type="text" style="width: 96%" id="CS" name="thalach" placeholder="Max. Heart Rate .."> <br>
+          <input  type="text" style="width: 96%" id="CS" name="thalach" placeholder="Max. Heart Rate .." required> <br>
           
           <label for="eia">Exercise Induced Angina </label>
-          <select id="fps" name="exang">
+          <select id="fps" name="exang" required>
             <option value="" disabled selected>Exercise Induced Angina </option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select> <br>
 
           <label for="stdie">ST Depression Induced by Exercise</label>
-          <input type="text" style="width: 96%" id="Age" name="oldpeak" placeholder="Enter Value.."> <br>
+          <input type="text" style="width: 96%" id="Age" name="oldpeak" placeholder="Enter Value.." required> <br>
 
           <label for="gender">Peak Exercise ST Segment</label>
           <div class="tooltip">(info)
-            <span class="tooltiptext">A treadmill ECG stress test is considered abnormal when there is a horizontal or down-sloping ST-segment depression ≥ 1 mm at 60–80 ms after the J point.</span>
+            <span class="tooltiptext">A treadmill ECG stress test is considered abnormal when there is a horizontal or down-sloping ST-segment depression â‰¥ 1 mm at 60â€“80 ms after the J point.</span>
           </div>
-          <select id="fps" name="slope">
+          <select id="fps" name="slope" required>
             <option value="" disabled selected>Peak exercise ST Segment</option>
             <option value="Upsloping">Upsloping</option>
             <option value="Flat">Flat</option>
@@ -262,10 +262,10 @@
           </select> <br>
 
           <label for="mvcf">Number of Major Vessels Colored by Flourosopy </label>
-          <input  type="text" style="width: 96%" id="CS" name="ca" placeholder="Enter value .."> <br>
+          <input  type="text" style="width: 96%" id="CS" name="ca" placeholder="Enter value .." required> <br>
 
           <label for="gender">thalassemia</label>
-          <select id="fps" name="thal">
+          <select id="fps" name="thal" required>
             <option value="" disabled selected>Thal </option>
             <option value="Normal">Normal</option>
             <option value="Fixed Defect">Fixed Defect</option>
