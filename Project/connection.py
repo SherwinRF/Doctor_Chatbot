@@ -87,7 +87,10 @@ def getvalue():
     elif thal == 'Reversible Defect': thal = 3
     
     #print(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
-    op = SVM.svm_pred(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+    try:
+        op = SVM.svm_pred(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+    except Exception as e:
+        print(type(e).__name__)
     global speech
     if op == 0: 
         opstr = "No Heart Disease"
