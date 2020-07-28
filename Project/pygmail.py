@@ -1,8 +1,8 @@
 import smtplib
 
 def sendEmail( mailto, doctor, date, time, name, report ):
-    gmailaddress = "doctor.chatbot.project@gmail.com"
-    gmailpassword = "chatbot2020"
+    gmailaddress = "EMAIL_ID"
+    gmailpassword = "PASSWORD"
     
     sub = "Confirmed: Doctor Appointment Booked"
     if (len(report) == 0): report = "Checkup"
@@ -25,4 +25,4 @@ def sendEmail( mailto, doctor, date, time, name, report ):
 
 # Turn ON/OFF
 # https://myaccount.google.com/lesssecureapps
-# Check Spam Folder
+# Check Spam Folder if message not delivered
