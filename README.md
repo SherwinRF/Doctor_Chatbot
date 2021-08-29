@@ -1,4 +1,4 @@
-**UPDATE: Check out the Working Demo of Doctor Chatbot Project: https://doctor-chatbot-project.herokuapp.com/. Please note that this version (v2) is re-built using React, Flask & deployed on Heroku!**
+## UPDATE: Check out the WORKING DEMO of Doctor Chatbot Project: https://doctor-chatbot-project.herokuapp.com/. Please note that this version (v2) is re-built using React, Flask & deployed on Heroku!
 
 About Doctor Chatbot
 ===
