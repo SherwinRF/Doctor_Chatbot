@@ -8,7 +8,6 @@ Note: The Appointment Scheduler is just a dummy module for this project.
 
 
 
-[Project Reports, Synopsis & Survey Paper](https://drive.google.com/drive/folders/1_aEZQs0RKcXmu55yPht6UxMWTdwJrvaY?usp=sharing).
 
 #### [Project Demonstration Video](https://youtu.be/p3QAyCCfmLI/) (Youtube):
 
